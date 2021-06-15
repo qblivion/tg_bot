@@ -10,9 +10,9 @@ bot = telebot.TeleBot(token)
 @bot.message_handler(commands=['start', 'help', 'info'])
 def command_helper(message):
     if message.text == '/start':
-        bot.send_message(chat_id=message.from_user.id, text="Hi "+ message.from_user.first_name + ", i'm testBot. "
-                                                                                                  "Send /help to get "
-                                                                                                  "help")
+        bot.send_message(chat_id=message.from_user.id, text="Hi " + message.from_user.first_name + ", i'm testBot. "
+                                                                                                   "Send /help to get "
+                                                                                                   "help")
     if message.text == '/help':
         bot.reply_to(message, text="It is still hard for me to perceive your messages, "
                                    "please be patient. Try to send me a text or photo. "
